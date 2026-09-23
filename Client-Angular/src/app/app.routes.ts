@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { DatePage } from './pages/date/date.page';
 import { ProductsPage } from './pages/products/products.page';
 import { UsersPage } from './pages/users/users.page';
+import { MarvelRivalsPage } from './pages/MarvelRivals/marvel-rivals.page';
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -46,6 +47,8 @@ export const routes: Routes = [
    * de mostrar la fecha actual del sistema.
    */
   { path: 'date', component: DatePage },
+
+  { path: 'MarvelRivals', component: MarvelRivalsPage},
 
   /**
    * Ruta comodín.
