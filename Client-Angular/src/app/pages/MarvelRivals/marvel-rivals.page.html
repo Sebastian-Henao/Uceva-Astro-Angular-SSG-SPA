@@ -1,1 +1,15 @@
-<p>marvel-rivals.page works!</p>
+@switch(state){
+
+    @case('loading'){
+        <app-alert alertState="loading" text="Cargando personajes..." ></app-alert>
+    }
+
+    @case('error'){
+        <app-alert alertState="error" text="Error al Cargar los personajes" ></app-alert>
+    }
+
+    @case('success'){
+        <app-marvel-rivals-table [marvelrivals]="Marvelrivals" ></app-marvel-rivals-table>
+    }
+
+}
