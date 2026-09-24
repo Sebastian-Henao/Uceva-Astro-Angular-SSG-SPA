@@ -3,6 +3,7 @@ import { DatePage } from './pages/date/date.page';
 import { ProductsPage } from './pages/products/products.page';
 import { UsersPage } from './pages/users/users.page';
 import { MarvelRivalsPage } from './pages/MarvelRivals/marvel-rivals.page';
+import { LolJunglePage } from './pages/lol-jungle/lol-jungle-page/lol-jungle-page';
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -49,6 +50,15 @@ export const routes: Routes = [
   { path: 'date', component: DatePage },
 
   { path: 'MarvelRivals', component: MarvelRivalsPage},
+
+  /**
+   * Ruta de campeones jungla de League of Legends.
+   *
+   * @remarks
+   * Renderiza el componente `LolJunglePage`, encargado
+   * de mostrar el listado de 20 campeones jungla.
+   */
+  { path: 'lol-jungle', component: LolJunglePage },
 
   /**
    * Ruta comodín.

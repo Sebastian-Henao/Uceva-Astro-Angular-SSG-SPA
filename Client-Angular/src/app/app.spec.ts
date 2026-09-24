@@ -36,7 +36,8 @@ describe('App', () => {
         { text: 'Usuarios', url: '/users' },
         { text: 'Productos', url: '/products' },
         { text: 'Fecha', url: '/date' },
-        { text: 'Marvel Rivals', url: '/MarvelRivals'}
+        { text: 'Marvel Rivals', url: '/MarvelRivals'},
+        { text: 'LoL Jungla', url: '/lol-jungle' },
       ]
     });
   });

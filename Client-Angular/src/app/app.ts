@@ -61,6 +61,7 @@ export class App {
       { text: 'Productos', url: '/products' },
       { text: 'Fecha', url: '/date' },
       { text: 'Marvel Rivals', url: '/MarvelRivals' },
+      { text: 'LoL Jungla', url: '/lol-jungle' },
     ]
   };
 }
