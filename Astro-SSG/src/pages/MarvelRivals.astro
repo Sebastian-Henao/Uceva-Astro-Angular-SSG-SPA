@@ -1,0 +1,48 @@
+---
+import Badge from "@components/shared/Badge.astro";
+import { PERSONAJES_MARVEL_RIVALS } from "@data/MarvelRivals"; 
+import type { BadgeType } from "@interfaces/Badge";
+import type {MarvelRivals, RolCategoria} from "@interfaces/MarvelRivals";
+import MainLayout from "@layouts/MainLayout.astro";
+
+const marvelRivals: MarvelRivals[] = PERSONAJES_MARVEL_RIVALS;
+
+const categoryMap: Record<RolCategoria, BadgeType> = {
+    'Vanguardia': 'primary',
+    'Duelista': 'danger',
+    'Estratega': 'info',
+    'Variable': 'warning',
+}
+
+---
+<MainLayout>
+  <table class="table table-striped border">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Alias</th>
+        <th scope="col">Equipo</th>
+        <th scope="col">Habilidad</th>
+        <th scope="col">Rol</th>
+      </tr>
+    </thead>
+    <tbody>
+      {marvelRivals.map((MarvelRivals) => (
+        <tr>
+          <th scope="row">{MarvelRivals.id}</th>
+          <td>{MarvelRivals.nombre}</td>
+          <td>{MarvelRivals.alias}</td>
+          <td>{MarvelRivals.equipo}</td>
+          <td>{MarvelRivals.habilidad}</td>
+          <td>
+            <Badge
+              text={MarvelRivals.rol}
+              type={categoryMap[MarvelRivals.rol]}
+            />
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</MainLayout>
