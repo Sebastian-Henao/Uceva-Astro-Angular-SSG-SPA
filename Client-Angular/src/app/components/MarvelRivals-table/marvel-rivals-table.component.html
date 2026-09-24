@@ -1,0 +1,29 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Alias</th>
+			<th scope="col">Equipo</th>
+			<th scope="col">Habilidad</th>
+			<th scope="col">Rol</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (marvelrival of marvelrivals; track marvelrival) {
+			<tr>
+				<th scope="row">{{ marvelrival.id }}</th>
+				<td>{{ marvelrival.nombre }}</td>
+				<td>{{ marvelrival.alias }}</td>
+				<td>{{ marvelrival.equipo }}</td>
+				<td>{{ marvelrival.habilidad }}</td>
+				<td>
+					<dsb-badge-atom
+						[text]="marvelrival.rol"
+						[type]="categoryMap[marvelrival.rol]" >
+					</dsb-badge-atom>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
