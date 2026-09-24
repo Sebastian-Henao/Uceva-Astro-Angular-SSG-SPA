@@ -1,5 +1,15 @@
 import { JungleChampion } from '../interfaces/JungleChampion';
 
+/**
+ * Mock local con los 20 campeones jungla de League of Legends.
+ *
+ * @remarks
+ * Contiene datos estáticos que simulan la respuesta de un backend.
+ * Se utiliza en `LolJungleService` para proveer datos sin llamadas externas,
+ * garantizando builds reproducibles y comparables entre Angular y Astro.
+ *
+ * @type {JungleChampion[]}
+ */
 export const JUNGLE_CHAMPIONS: JungleChampion[] = [
   { id: 1,  name: 'Lee Sin',    title: 'El Monje Ciego',                  class: 'Luchador', region: 'Jonia' },
   { id: 2,  name: 'Elise',      title: 'La Reina de las Arañas',          class: 'Mago',     region: 'Islas de la Sombra' },
