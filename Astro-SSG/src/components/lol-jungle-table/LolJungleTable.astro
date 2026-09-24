@@ -1,4 +1,47 @@
 ---
-// Componente tabla de campeones jungla de League of Legends
-// Esqueleto base - se implementará en commits siguientes
+import Badge from "@components/shared/Badge.astro";
+import type { BadgeType } from "@interfaces/Badge";
+import type { JungleChampion } from "@interfaces/JungleChampion";
+
+interface Props {
+  champions: JungleChampion[];
+}
+
+const { champions } = Astro.props;
+
+const classMap: Record<string, BadgeType> = {
+  'Asesino':  'danger',
+  'Luchador': 'warning',
+  'Tanque':   'primary',
+  'Mago':     'info',
+  'Tirador':  'success',
+};
 ---
+
+<table class="table table-striped border">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Título</th>
+      <th scope="col">Clase</th>
+      <th scope="col">Región</th>
+    </tr>
+  </thead>
+  <tbody>
+    {champions.map((champion) => (
+      <tr>
+        <th scope="row">{champion.id}</th>
+        <td>{champion.name}</td>
+        <td>{champion.title}</td>
+        <td>
+          <Badge
+            text={champion.class}
+            type={classMap[champion.class]}
+          />
+        </td>
+        <td>{champion.region}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
