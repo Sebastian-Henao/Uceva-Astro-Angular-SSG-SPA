@@ -1,5 +1,11 @@
 import { MarvelRivals } from "../interfaces/MarvelRivals.interface";
 
+/**
+ * Listado de personajes de Marvel Rivals disponibles en el sistema
+ * 
+ * Esta constante simula una fiente de datos (mock) que representa
+ * informacion basica de personajes
+ */
 export const PERSONAJES_MARVEL_RIVALS: MarvelRivals[] = [
     {
         id: 1,

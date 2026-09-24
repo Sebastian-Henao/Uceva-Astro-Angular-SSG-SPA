@@ -1,5 +1,8 @@
 import { MarvelRivals } from "../interfaces/MarvelRivals.interface";
 
+/**
+ * Conjunto de datos de prueba (mock) para el módulo Marvel Rivals.
+ */
 export const MARVEL_RIVALS_MOCK: MarvelRivals[] = [
     {
         id: 1,
