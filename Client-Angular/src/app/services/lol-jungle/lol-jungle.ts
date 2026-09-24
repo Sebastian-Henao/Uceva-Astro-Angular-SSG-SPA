@@ -18,6 +18,7 @@ import { JUNGLE_CHAMPIONS } from '../../mocks/JungleChampions';
   providedIn: 'root',
 })
 export class LolJungleService {
+  /** Crea una instancia del servicio. Angular lo gestiona mediante inyección de dependencias. */
   constructor() {}
 
   /**
