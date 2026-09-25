@@ -1,0 +1,9 @@
+---
+import VideojuegosTable from '@components/videojuegos-table/VideojuegosTable.astro';
+import { VIDEOJUEGOS } from '@data/Videojuegos';
+import MainLayout from '@layouts/MainLayout.astro';
+---
+
+<MainLayout>
+  <VideojuegosTable videojuegos={VIDEOJUEGOS} />
+</MainLayout>
