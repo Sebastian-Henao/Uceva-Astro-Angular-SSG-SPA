@@ -1,0 +1,27 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Título</th>
+			<th scope="col">Clase</th>
+			<th scope="col">Región</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (champion of champions; track champion.id) {
+			<tr>
+				<th scope="row">{{ champion.id }}</th>
+				<td>{{ champion.name }}</td>
+				<td>{{ champion.title }}</td>
+				<td>
+					<dsb-badge-atom
+						[text]="champion.class"
+						[type]="classMap[champion.class]">
+					</dsb-badge-atom>
+				</td>
+				<td>{{ champion.region }}</td>
+			</tr>
+		}
+	</tbody>
+</table>

@@ -1,0 +1,11 @@
+---
+import LolJungleTable from "@components/lol-jungle-table/LolJungleTable.astro";
+import { JUNGLE_CHAMPIONS } from "@data/JungleChampions";
+import MainLayout from "@layouts/MainLayout.astro";
+
+const champions = JUNGLE_CHAMPIONS;
+---
+
+<MainLayout>
+  <LolJungleTable champions={champions} />
+</MainLayout>

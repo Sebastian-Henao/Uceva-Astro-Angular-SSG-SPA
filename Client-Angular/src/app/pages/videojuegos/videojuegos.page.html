@@ -1,0 +1,13 @@
+@switch (state) {
+  @case ('loading') {
+    <app-alert alertState="loading" text="Cargando videojuegos..."></app-alert>
+  }
+
+  @case ('error') {
+    <app-alert alertState="error" text="Error al cargar los videojuegos"></app-alert>
+  }
+
+  @case ('success') {
+    <app-videojuegos-table [videojuegos]="videojuegos"></app-videojuegos-table>
+  }
+}

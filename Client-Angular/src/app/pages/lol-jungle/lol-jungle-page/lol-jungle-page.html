@@ -1,0 +1,15 @@
+@switch(state){
+
+    @case('loading'){
+        <app-alert alertState="loading" text="Cargando campeones jungla..." ></app-alert>
+    }
+
+    @case('error'){
+        <app-alert alertState="error" text="Error al cargar los campeones" ></app-alert>
+    }
+
+    @case('success'){
+        <app-lol-jungle-table [champions]="champions" ></app-lol-jungle-table>
+    }
+
+}
