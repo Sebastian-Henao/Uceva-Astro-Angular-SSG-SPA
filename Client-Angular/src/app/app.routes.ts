@@ -4,6 +4,7 @@ import { ProductsPage } from './pages/products/products.page';
 import { UsersPage } from './pages/users/users.page';
 import { MarvelRivalsPage } from './pages/MarvelRivals/marvel-rivals.page';
 import { LolJunglePage } from './pages/lol-jungle/lol-jungle-page/lol-jungle-page';
+import { VideojuegosPage } from './pages/videojuegos/videojuegos.page';
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -59,6 +60,14 @@ export const routes: Routes = [
    * de mostrar el listado de 20 campeones jungla.
    */
   { path: 'lol-jungle', component: LolJunglePage },
+
+  /**
+   * Ruta del catalogo de videojuegos.
+   *
+   * @remarks
+   * Renderiza el listado local de videojuegos disponible para la vista.
+   */
+  { path: 'videojuegos', component: VideojuegosPage },
 
   /**
    * Ruta comodín.

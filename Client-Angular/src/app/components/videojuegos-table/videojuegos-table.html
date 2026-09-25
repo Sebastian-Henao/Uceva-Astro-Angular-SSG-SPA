@@ -1,0 +1,24 @@
+<table class="table table-striped border">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Genero</th>
+      <th scope="col">Plataformas</th>
+      <th scope="col">Lanzamiento</th>
+      <th scope="col">Desarrollador</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (videojuego of videojuegos; track videojuego.id) {
+      <tr>
+        <th scope="row">{{ videojuego.id }}</th>
+        <td>{{ videojuego.nombre }}</td>
+        <td>{{ videojuego.genero }}</td>
+        <td>{{ videojuego.plataformas }}</td>
+        <td>{{ videojuego.lanzamiento }}</td>
+        <td>{{ videojuego.desarrollador }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
